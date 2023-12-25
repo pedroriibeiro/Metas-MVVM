@@ -14,6 +14,7 @@ protocol LoginScreenProtocol: AnyObject {
 class LoginScreen: UIView {
     
     private weak var delegate: LoginScreenProtocol?
+    
     public func delegate(delegate: LoginScreenProtocol?) {
         self.delegate = delegate
     }
@@ -73,7 +74,8 @@ class LoginScreen: UIView {
     }()
     
     @objc func tappedNextButton(_ sender: UIButton) {
-        print("funcionou essa budega")
+        //print("funcionou essa budega")
+        delegate?.tappedNextButton()
     }
     
     override init(frame: CGRect) {
