@@ -61,6 +61,7 @@ class LoginScreen: UIView {
     
     lazy var nextButton: UIButton = {
         let button: UIButton = UIButton()
+        button.isHidden = true
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Seguinte >", for: .normal)
         button.setTitleColor(.white, for: .normal)

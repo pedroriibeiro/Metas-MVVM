@@ -28,7 +28,11 @@ class LoginVC: UIViewController {
 
 extension LoginVC: LoginScreenProtocol {
     func tappedNextButton() {
+        
         print("Chegou na vc")
+        let vc: HomeVC = HomeVC()
+       // present(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -39,6 +43,18 @@ extension LoginVC: UITextFieldDelegate {
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         print(#function)
+        let name: String = loginScreen?.nameTextField.text ?? ""
+        
+        if !name.isEmpty {
+            print("botão habilitado")
+            loginScreen?.nextButton.isHidden = false
+            loginScreen?.nextButton.isEnabled = true
+            loginScreen?.nextButton.setTitleColor(.white, for: .normal)
+        } else {
+            print("botão desabilitado")
+            loginScreen?.nextButton.isEnabled = false
+            loginScreen?.nextButton.setTitleColor(.white.withAlphaComponent(0.0), for: .normal)
+        }
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print(#function)
