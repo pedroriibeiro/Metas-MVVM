@@ -9,9 +9,23 @@ import UIKit
 
 class HomeVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
+    var homeScreen: HomeScreen?
+    
+    override func loadView() {
+        homeScreen = HomeScreen()
+        view = homeScreen
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+    }
+  
+       // override func viewDidLoad() {
+            //super.viewDidLoad()
+            //loginScreen?.delegate(delegate: self)
+            //loginScreen?.configTextFieldDelegate(delegate: self)
+            
+            
+      
 }

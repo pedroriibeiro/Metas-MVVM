@@ -122,7 +122,8 @@ class LoginScreen: UIView {
             nameTextField.heightAnchor.constraint(equalToConstant: 45),
             
             nextButton.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 160),
-            nextButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 260)
+            nextButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 260),
+            
          
         ])
     }
