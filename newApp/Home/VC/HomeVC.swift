@@ -8,24 +8,30 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    
+    
     var homeScreen: HomeScreen?
     
     override func loadView() {
         homeScreen = HomeScreen()
         view = homeScreen
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        homeScreen?.delegate(delegate: self)
+        
     }
   
-       // override func viewDidLoad() {
-            //super.viewDidLoad()
-            //loginScreen?.delegate(delegate: self)
-            //loginScreen?.configTextFieldDelegate(delegate: self)
-            
-            
-      
+
+}
+
+extension HomeVC: HomeScreenProtocol {
+    func tappedNextButton2() {
+        print("chegou na vc")
+    }
+    
+    
 }
