@@ -9,12 +9,17 @@ import UIKit
 
 class HomeVC: UIViewController {
     
+    var name: String
     
     var homeScreen: HomeScreen?
     
     override func loadView() {
-        homeScreen = HomeScreen()
+        homeScreen = HomeScreen(userName: name)
         view = homeScreen
+    
+        
+        
+        
         
     }
     
@@ -23,14 +28,28 @@ class HomeVC: UIViewController {
         view.backgroundColor = .white
         homeScreen?.delegate(delegate: self)
         
+        
+        
+        
     }
-  
-
+    init(name: String) {
+        self.name = name
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
 
 extension HomeVC: HomeScreenProtocol {
     func tappedNextButton2() {
         print("chegou na vc")
+        let vc: Tela01VC = Tela01VC()
+       // present(vc, animated: true)
+       // vc.name = self.loginScreen?.nameTextField.text
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

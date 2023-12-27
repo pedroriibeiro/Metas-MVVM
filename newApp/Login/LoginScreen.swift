@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginScreenProtocol: AnyObject {
-    func tappedNextButton()
+    func tappedNextButton(name: String)
 }
 
 class LoginScreen: UIView {
@@ -78,7 +78,8 @@ class LoginScreen: UIView {
     
     @objc func tappedNextButton(_ sender: UIButton) {
         //print("funcionou essa budega")
-        delegate?.tappedNextButton()
+        if let userName = nameTextField.text {
+            delegate?.tappedNextButton(name: userName) }
     }
     
     override init(frame: CGRect) {

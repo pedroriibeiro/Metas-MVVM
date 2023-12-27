@@ -15,6 +15,7 @@ class LoginVC: UIViewController {
     override func loadView() {
         loginScreen = LoginScreen()
         view = loginScreen
+        
     }
 
     override func viewDidLoad() {
@@ -24,16 +25,18 @@ class LoginVC: UIViewController {
         loginScreen?.configTextFieldDelegate(delegate: self)
         
         
+        
     }
 
 }
 
 extension LoginVC: LoginScreenProtocol {
-    func tappedNextButton() {
+    func tappedNextButton(name: String) {
         
         print("Chegou na vc")
-        let vc: HomeVC = HomeVC()
+        let vc: HomeVC = HomeVC(name: name)
        // present(vc, animated: true)
+        
         navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -13,6 +13,10 @@ protocol HomeScreenProtocol: AnyObject {
     
     class HomeScreen: UIView {
         
+        var userName: String
+        
+        
+        
         private weak var delegate: HomeScreenProtocol?
         
         public func delegate(delegate: HomeScreenProtocol?) {
@@ -85,26 +89,24 @@ protocol HomeScreenProtocol: AnyObject {
             delegate?.tappedNextButton2()
         }
         
-        
-        
-        
-        lazy var nameLabel: UILabel = {
+        lazy var userNameLabel: UILabel = {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             label.textColor = UIColor(red: 20/255, green: 82/255, blue: 20/255, alpha: 1.0)
-            label.font = .boldSystemFont(ofSize: 90)
-            label.text = ""
-            label.textAlignment = .left
+            label.font = .systemFont(ofSize: 22)
+            label.text = "  Olá, \(userName)."
+            label.numberOfLines = 6
+            label.textAlignment = .natural
             return label
         }()
-        
         
         
         
         //vc?.name = self.loginScreen?.nameTextField.text
         
         
-        override init(frame: CGRect) {
+        init(frame: CGRect = .zero, userName: String) {
+            self.userName = userName
             super.init(frame: frame)
             addElements()
             configConstraints()
@@ -121,6 +123,8 @@ protocol HomeScreenProtocol: AnyObject {
             addSubview(text3Label)
             addSubview(logo2ImageView)
             addSubview(nextButton2)
+            addSubview(userNameLabel)
+            
         }
         
         private func configConstraints() {
@@ -131,29 +135,39 @@ protocol HomeScreenProtocol: AnyObject {
                 subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
                 subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
                 
-                text1Label.topAnchor.constraint(equalTo: subImageView.topAnchor, constant: 140),
+                text1Label.topAnchor.constraint(equalTo: subImageView.topAnchor, constant: 200),
                 text1Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35),
                 text1Label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
                 text1Label.heightAnchor.constraint(equalToConstant: 100),
+                text1Label.centerXAnchor.constraint(equalTo: centerXAnchor),
                 
                 text2Label.topAnchor.constraint(equalTo: text1Label.bottomAnchor, constant: 5),
                 text2Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35),
                 text2Label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
                 text2Label.heightAnchor.constraint(equalToConstant: 110),
+                text2Label.centerXAnchor.constraint(equalTo: centerXAnchor),
                 
                 text3Label.topAnchor.constraint(equalTo: text2Label.bottomAnchor, constant: 5),
                 text3Label.centerXAnchor.constraint(equalTo: centerXAnchor),
                 text3Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35),
                 text3Label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35),
                 text3Label.heightAnchor.constraint(equalToConstant: 110),
+                text3Label.centerXAnchor.constraint(equalTo: centerXAnchor),
                 
-                logo2ImageView.topAnchor.constraint(equalTo: text3Label.bottomAnchor, constant: 80),
+                logo2ImageView.topAnchor.constraint(equalTo: text3Label.bottomAnchor, constant: 20),
                 logo2ImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
                 logo2ImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -260),
                 logo2ImageView.heightAnchor.constraint(equalToConstant: 100),
+                logo2ImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
                 
-                nextButton2.topAnchor.constraint(equalTo: text3Label.topAnchor, constant: 200),
+                nextButton2.topAnchor.constraint(equalTo: text3Label.topAnchor, constant: 140),
                 nextButton2.trailingAnchor.constraint(equalTo: text3Label.trailingAnchor),
+                
+                userNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 140),
+                userNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35),
+                userNameLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
+                
+                
                 
                 
                 

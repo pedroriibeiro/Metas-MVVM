@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8535609D2B3CB35500A404AE /* Tela01VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8535609C2B3CB35500A404AE /* Tela01VC.swift */; };
+		8535609F2B3CB39200A404AE /* Tela01Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8535609E2B3CB39200A404AE /* Tela01Screen.swift */; };
 		854787902B35C48200F8E5E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547878F2B35C48200F8E5E9 /* AppDelegate.swift */; };
 		854787922B35C48200F8E5E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854787912B35C48200F8E5E9 /* SceneDelegate.swift */; };
 		854787942B35C48200F8E5E9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854787932B35C48200F8E5E9 /* LoginVC.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8535609C2B3CB35500A404AE /* Tela01VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela01VC.swift; sourceTree = "<group>"; };
+		8535609E2B3CB39200A404AE /* Tela01Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela01Screen.swift; sourceTree = "<group>"; };
 		8547878C2B35C48200F8E5E9 /* newApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8547878F2B35C48200F8E5E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		854787912B35C48200F8E5E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		853560982B3CB2D600A404AE /* Tela01 */ = {
+			isa = PBXGroup;
+			children = (
+				8535609B2B3CB30E00A404AE /* Screen */,
+				853560992B3CB2F900A404AE /* VC */,
+			);
+			path = Tela01;
+			sourceTree = "<group>";
+		};
+		853560992B3CB2F900A404AE /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				8535609C2B3CB35500A404AE /* Tela01VC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		8535609B2B3CB30E00A404AE /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8535609E2B3CB39200A404AE /* Tela01Screen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		854787832B35C48200F8E5E9 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +89,7 @@
 		8547878E2B35C48200F8E5E9 /* newApp */ = {
 			isa = PBXGroup;
 			children = (
+				853560982B3CB2D600A404AE /* Tela01 */,
 				85E0B0A02B3AF8FF005BAB85 /* Home */,
 				85E0B09F2B3AF8D8005BAB85 /* Login */,
 				8547878F2B35C48200F8E5E9 /* AppDelegate.swift */,
@@ -179,6 +209,8 @@
 				85E0B0A32B3AF950005BAB85 /* HomeVC.swift in Sources */,
 				85E0B0A62B3B032E005BAB85 /* HomeScreen.swift in Sources */,
 				854787A42B35C54300F8E5E9 /* LoginScreen.swift in Sources */,
+				8535609F2B3CB39200A404AE /* Tela01Screen.swift in Sources */,
+				8535609D2B3CB35500A404AE /* Tela01VC.swift in Sources */,
 				854787902B35C48200F8E5E9 /* AppDelegate.swift in Sources */,
 				854787922B35C48200F8E5E9 /* SceneDelegate.swift in Sources */,
 			);
