@@ -35,7 +35,7 @@ extension LoginVC: LoginScreenProtocol {
         
         print("Chegou na vc")
         let vc: HomeVC = HomeVC(name: name)
-       // present(vc, animated: true)
+      // present(vc, animated: true)
         
         navigationController?.pushViewController(vc, animated: true)
     }

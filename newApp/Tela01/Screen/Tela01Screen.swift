@@ -16,8 +16,27 @@ class Tela01Screen: UIView {
         return image
     }()
     
+    lazy var collectionView: UICollectionView = {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.showsHorizontalScrollIndicator = false
+        //TO DO: REGISTER
+        cv.backgroundColor = .clear
+        return cv
+    }()
+    
+    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
+    }
+    
     private func addElements() {
         addSubview(subImageView)
+        addSubview(collectionView)
+       
+        
         
     }
     
@@ -25,6 +44,8 @@ class Tela01Screen: UIView {
         super.init(frame: frame)
         addElements()
         configConstraints()
+        
+        
     }
     
     required init?(coder: NSCoder) {
@@ -32,12 +53,18 @@ class Tela01Screen: UIView {
     }
     
     private func configConstraints() {
+        //subImageView.pin(to: self)
         NSLayoutConstraint.activate([
             
-            subImageView.topAnchor.constraint(equalTo: topAnchor),
-            subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+          subImageView.topAnchor.constraint(equalTo: topAnchor),
+          subImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+          subImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+          subImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 200),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -200),
      
         ])
         
