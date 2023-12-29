@@ -150,8 +150,8 @@
 		854C4AF12B3D96D5003A7426 /* StoryCardCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				854C4AF42B3D975A003A7426 /* Screen */,
 				854C4AF22B3D971E003A7426 /* StoryCardCollectionViewCell.swift */,
+				854C4AF42B3D975A003A7426 /* Screen */,
 			);
 			path = StoryCardCollectionViewCell;
 			sourceTree = "<group>";

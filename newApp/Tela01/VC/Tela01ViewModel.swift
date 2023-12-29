@@ -11,7 +11,7 @@ class Tela01ViewModel {
 
     
     public var numberOfItems: Int {
-        2
+        1
     }
     
     public func sizeForItem(indexPath: IndexPath, frame: CGRect) -> CGSize {
