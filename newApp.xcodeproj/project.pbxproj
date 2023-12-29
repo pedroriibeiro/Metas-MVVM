@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8535609D2B3CB35500A404AE /* Tela01VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8535609C2B3CB35500A404AE /* Tela01VC.swift */; };
 		8535609F2B3CB39200A404AE /* Tela01Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8535609E2B3CB39200A404AE /* Tela01Screen.swift */; };
+		8541832A2B3EF65100F063F4 /* StoryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854183292B3EF65100F063F4 /* StoryCardViewModel.swift */; };
+		8541832D2B3EF71500F063F4 /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8541832C2B3EF71500F063F4 /* Lista.swift */; };
 		854787902B35C48200F8E5E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8547878F2B35C48200F8E5E9 /* AppDelegate.swift */; };
 		854787922B35C48200F8E5E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854787912B35C48200F8E5E9 /* SceneDelegate.swift */; };
 		854787942B35C48200F8E5E9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854787932B35C48200F8E5E9 /* LoginVC.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		8535609C2B3CB35500A404AE /* Tela01VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela01VC.swift; sourceTree = "<group>"; };
 		8535609E2B3CB39200A404AE /* Tela01Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela01Screen.swift; sourceTree = "<group>"; };
+		854183292B3EF65100F063F4 /* StoryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCardViewModel.swift; sourceTree = "<group>"; };
+		8541832C2B3EF71500F063F4 /* Lista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
 		8547878C2B35C48200F8E5E9 /* newApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8547878F2B35C48200F8E5E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		854787912B35C48200F8E5E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		853560982B3CB2D600A404AE /* Tela01 */ = {
 			isa = PBXGroup;
 			children = (
+				8541832E2B3EF7F600F063F4 /* ViewModel */,
 				854C4AF02B3D96C5003A7426 /* Cell */,
 				8535609B2B3CB30E00A404AE /* Screen */,
 				853560992B3CB2F900A404AE /* VC */,
@@ -69,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				8535609C2B3CB35500A404AE /* Tela01VC.swift */,
-				854C4AEE2B3D943F003A7426 /* Tela01ViewModel.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -80,6 +84,30 @@
 				8535609E2B3CB39200A404AE /* Tela01Screen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		854183282B3EF61D00F063F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				854183292B3EF65100F063F4 /* StoryCardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8541832B2B3EF6F000F063F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8541832C2B3EF71500F063F4 /* Lista.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8541832E2B3EF7F600F063F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				854C4AEE2B3D943F003A7426 /* Tela01ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		854787832B35C48200F8E5E9 = {
@@ -101,6 +129,7 @@
 		8547878E2B35C48200F8E5E9 /* newApp */ = {
 			isa = PBXGroup;
 			children = (
+				8541832B2B3EF6F000F063F4 /* Model */,
 				854C4AE92B3D8B47003A7426 /* Extension */,
 				853560982B3CB2D600A404AE /* Tela01 */,
 				85E0B0A02B3AF8FF005BAB85 /* Home */,
@@ -150,6 +179,7 @@
 		854C4AF12B3D96D5003A7426 /* StoryCardCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				854183282B3EF61D00F063F4 /* ViewModel */,
 				854C4AF22B3D971E003A7426 /* StoryCardCollectionViewCell.swift */,
 				854C4AF42B3D975A003A7426 /* Screen */,
 			);
@@ -272,9 +302,11 @@
 				85E0B0A32B3AF950005BAB85 /* HomeVC.swift in Sources */,
 				854C4AF62B3D977E003A7426 /* StoryCardCollectionViewCellScreen.swift in Sources */,
 				85E0B0A62B3B032E005BAB85 /* HomeScreen.swift in Sources */,
+				8541832A2B3EF65100F063F4 /* StoryCardViewModel.swift in Sources */,
 				854C4AEF2B3D943F003A7426 /* Tela01ViewModel.swift in Sources */,
 				854787A42B35C54300F8E5E9 /* LoginScreen.swift in Sources */,
 				8535609F2B3CB39200A404AE /* Tela01Screen.swift in Sources */,
+				8541832D2B3EF71500F063F4 /* Lista.swift in Sources */,
 				854C4AF32B3D971E003A7426 /* StoryCardCollectionViewCell.swift in Sources */,
 				8535609D2B3CB35500A404AE /* Tela01VC.swift in Sources */,
 				854787902B35C48200F8E5E9 /* AppDelegate.swift in Sources */,

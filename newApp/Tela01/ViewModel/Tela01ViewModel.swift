@@ -9,6 +9,19 @@ import UIKit
 
 class Tela01ViewModel {
 
+    private var listagem = [
+        Lista(image: "circuloImg", userObjective: "."),
+        Lista(image: "circuloImg", userObjective: "."),
+        Lista(image: "circuloImg", userObjective: "."),
+        Lista(image: "circuloImg", userObjective: "."),
+        Lista(image: "circuloImg", userObjective: "."),
+        Lista(image: "circuloImg", userObjective: ".")
+    ]
+    
+    public var getListListagem: [Lista] {
+        listagem
+    }
+    
     
     public var numberOfItems: Int {
         1
